@@ -1,0 +1,12 @@
+2019-09-19T06:51:04.609Z - info:   [10252] *** FOLDER: c:\Users\davec\PycharmProjects\django-ecom ***
+2019-09-19T06:51:04.610Z - info:   [10252] AzureReposVSCode/1.149.2 (VSCode 1.38.1; Windows_NT 10.0.18963; Node 10.11.0)
+2019-09-19T06:51:04.618Z - warn:   [10252] TFVC Couldn't find where the TF command lives on disk.
+2019-09-19T06:51:04.621Z - error:  [10252] The path to the TFVC command line (including filename) was not found in the user settings. Please set this value (tfvc.location) and try again.
+2019-09-19T06:55:00.805Z - info:   [10252] *** FOLDER: c:\Users\davec\PycharmProjects\django-ecom ***
+2019-09-19T06:55:00.806Z - info:   [10252] AzureReposVSCode/1.149.2 (VSCode 1.38.1; Windows_NT 10.0.18963; Node 10.11.0)
+2019-09-19T06:55:00.849Z - warn:   [10252] TFVC Couldn't find where the TF command lives on disk.
+2019-09-19T06:55:00.856Z - error:  [10252] The path to the TFVC command line (including filename) was not found in the user settings. Please set this value (tfvc.location) and try again.
+2019-09-19T07:03:25.494Z - info:   [10252] *** FOLDER: c:\Users\davec\PycharmProjects\django-ecom ***
+2019-09-19T07:03:25.494Z - info:   [10252] AzureReposVSCode/1.149.2 (VSCode 1.38.1; Windows_NT 10.0.18963; Node 10.11.0)
+2019-09-19T07:03:25.637Z - warn:   [10252] TFVC Couldn't find where the TF command lives on disk.
+2019-09-19T07:03:25.664Z - error:  [10252] The path to the TFVC command line (including filename) was not found in the user settings. Please set this value (tfvc.location) and try again.
