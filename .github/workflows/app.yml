@@ -32,7 +32,7 @@ jobs:
        source /home/$USER/venv/bin/activate
        
     - name: install application software
-        run: |
+      run: |
           sudo apt-get install build-essential libssl-dev libpq-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip -y
           sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev tk-dev libpng-dev libfreetype6-dev -y
           sudo apt install redis-server celery -y
