@@ -24,11 +24,42 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: install pytest
+    - name: install and activate venv
       run: |
-        pip install virtualenv
-        cd /home/$USER
-        virtualenv venv .
-        cd venv/
+       pip install virtualenv
+       mkdir /home/$USER/venv
+       virtualenv /home/$USER/venv
+       source /home/$USER/venv/bin/activate
+       
+    - name: install application software
+        run: |
+          sudo apt-get install build-essential libssl-dev libpq-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip -y
+          sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev tk-dev libpng-dev libfreetype6-dev -y
+          sudo apt install redis-server celery -y
+          sudo apt-get install postgresql postgresql-contrib -y
+          sudo apt-get install nginx curl -y
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
+          sudo add-apt-repository ppa:certbot/certbot
+          sudo apt-get install python-certbot-nginx -y
+          sudo apt-get install supervisor -y
+          ~/venv/bin/pip install gunicorn psycopg2-binary
+          sudo apt-get update -y
+          sudo apt-get install -y
+          sudo apt-get upgrade -y
+          sudo apt autoremove -y
+
+          projectslug=store
+          project_root=~/venv/$projectslug
+          project_repo=~/venv/${projectslug}.git
+
+          mkdir ~/venv/$projectslug
+          mkdir ~/repo
+          mkdir ~/repo/${projectslug}.git
+
+          cd ~/venv/$projectslug
+
+          sudo chown -hR $USER ~/
+
+
         
 
