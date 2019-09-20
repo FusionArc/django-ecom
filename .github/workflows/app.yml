@@ -33,6 +33,9 @@ jobs:
        
     - name: install application software
       run: |
+          sudo apt-get update -y
+          sudo apt-get install -y
+          sudo apt-get upgrade -y
           sudo apt-get install build-essential libssl-dev libpq-dev libcurl4-gnutls-dev libexpat1-dev gettext unzip -y
           sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev tk-dev libpng-dev libfreetype6-dev -y
           sudo apt install redis-server celery -y
@@ -42,7 +45,7 @@ jobs:
           sudo add-apt-repository ppa:certbot/certbot
           sudo apt-get install python-certbot-nginx -y
           sudo apt-get install supervisor -y
-          ~/venv/bin/pip install gunicorn psycopg2-binary
+          /home/$USER/venv/bin/pip install gunicorn psycopg2-binary
           sudo apt-get update -y
           sudo apt-get install -y
           sudo apt-get upgrade -y
@@ -59,6 +62,10 @@ jobs:
           cd ~/venv/$projectslug
 
           sudo chown -hR $USER ~/
+          
+          git clone https://github.com/DaveCheez/django-ecom /home/$USER/repo/${projectslug}.git --bare
+          
+          
 
 
         
